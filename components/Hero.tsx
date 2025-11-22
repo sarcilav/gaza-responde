@@ -28,8 +28,8 @@ export const Hero: React.FC<HeroProps> = ({ onBuy }) => {
               {BOOK_DETAILS.edition}
             </span>
             
-            {/* Title Text using Font */}
-            <h1 className="mb-6 block font-special text-5xl md:text-7xl lg:text-8xl text-slate-900 tracking-tighter leading-[0.9]">
+            {/* Title Text using Font - Explicitly text based */}
+            <h1 className="mb-6 block font-special text-5xl md:text-7xl lg:text-8xl text-slate-900 tracking-tighter leading-[0.9] uppercase">
               {BOOK_DETAILS.title}
             </h1>
 

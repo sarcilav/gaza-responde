@@ -1,4 +1,5 @@
 import { BookOpen, Heart, PenTool, Globe, HandHeart } from 'lucide-react';
+import coverImage from './cover.jpg';
 
 export const BOOK_DETAILS = {
   title: "GAZA RESPONDE", // Uppercase for the font style
@@ -7,7 +8,7 @@ export const BOOK_DETAILS = {
   originalEditor: "Refaat Alareer",
   translator: "Migdalia Arcila-Valenzuela",
   description: "Originalmente escrito en inglés y publicado en 2013, este libro contiene 23 cuentos de autores palestinos jóvenes que conmemoran los 5 años de la Operación Plomo Fundido, 23 días de bombardeo israelí sobre Gaza entre diciembre de 2008 y enero de 2009.",
-  coverPlaceholder: "cover.jpg", // Simplified path for public folder
+  coverPlaceholder: coverImage, // Uses the imported image path
   donationInfo: "El 100% de las ganancias serán donadas a The Sameer Project",
   price: "$60.000 COP",
   shipping: "Envío a todo el territorio nacional",
