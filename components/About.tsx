@@ -23,7 +23,23 @@ export const About: React.FC = () => {
                 <feature.icon className="h-6 w-6 text-palestine-green" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.name}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                {feature.name === 'Solidaridad Total' ? (
+                  <>
+                    El 100% de los fondos recaudados se destinan directamente a{' '}
+                    <a 
+                      href={BOOK_DETAILS.sameerUrl}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-palestine-green font-medium hover:text-palestine-darkGreen hover:underline"
+                    >
+                      The Sameer Project
+                    </a>.
+                  </>
+                ) : (
+                  feature.description
+                )}
+              </p>
             </div>
           ))}
         </div>

@@ -54,7 +54,16 @@ export const PurchaseModal: React.FC<PurchaseModalProps> = ({ isOpen, onClose })
           </div>
 
           <p className="text-slate-600 mb-6 text-sm leading-relaxed">
-            Para maximizar la donación a <strong className="text-slate-800">The Sameer Project</strong> y evitar comisiones de pasarelas de pago, manejamos los pedidos directamente.
+            Para maximizar la donación a{' '}
+            <a 
+              href={BOOK_DETAILS.sameerUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-800 font-bold hover:text-palestine-green hover:underline"
+            >
+              The Sameer Project
+            </a>{' '}
+            y evitar comisiones de pasarelas de pago, manejamos los pedidos directamente.
           </p>
 
           <div className="space-y-3">

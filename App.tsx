@@ -38,7 +38,15 @@ const App: React.FC = () => {
                 Al adquirir este libro, no solo ayudas a amplificar las voces de Palestina, sino que contribuyes directamente a la causa.
                 <br className="hidden md:block" />
                 <strong className="text-palestine-darkGreen block mt-2 text-xl">
-                  {BOOK_DETAILS.donationInfo}.
+                  El 100% de las ganancias serán donadas a{' '}
+                  <a 
+                    href={BOOK_DETAILS.sameerUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="underline hover:text-palestine-black"
+                  >
+                    The Sameer Project
+                  </a>.
                 </strong>
               </p>
               <button 

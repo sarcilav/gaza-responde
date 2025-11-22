@@ -10,6 +10,7 @@ export const BOOK_DETAILS = {
   description: "Originalmente escrito en inglés y publicado en 2013, este libro contiene 23 cuentos de autores palestinos jóvenes que conmemoran los 5 años de la Operación Plomo Fundido, 23 días de bombardeo israelí sobre Gaza entre diciembre de 2008 y enero de 2009.",
   coverPlaceholder: coverImage, // Uses the imported image path
   donationInfo: "El 100% de las ganancias serán donadas a The Sameer Project",
+  sameerUrl: "https://www.instagram.com/thesameerproject",
   price: "$60.000 COP",
   shipping: "Envío a todo el territorio nacional",
   whatsappNumber: "3112229114",

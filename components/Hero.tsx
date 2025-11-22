@@ -60,7 +60,17 @@ export const Hero: React.FC<HeroProps> = ({ onBuy }) => {
             {/* Donation Info Badge */}
             <div className="mb-10 inline-flex items-center gap-2 text-sm text-palestine-red font-medium bg-palestine-red/5 px-3 py-2 rounded-md border border-palestine-red/10">
               <Heart className="w-4 h-4 fill-palestine-red" />
-              {BOOK_DETAILS.donationInfo}
+              <span>
+                El 100% de las ganancias serán donadas a{' '}
+                <a 
+                  href={BOOK_DETAILS.sameerUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="underline hover:text-palestine-darkGreen font-bold"
+                >
+                  The Sameer Project
+                </a>
+              </span>
             </div>
 
             <ShareButtons />
