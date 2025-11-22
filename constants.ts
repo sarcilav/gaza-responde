@@ -1,16 +1,18 @@
 import { BookOpen, Heart, PenTool, Globe, HandHeart } from 'lucide-react';
 
 export const BOOK_DETAILS = {
-  title: "Gaza Responde",
+  title: "GAZA RESPONDE", // Uppercase for the font style
   subtitle: "Cuentos de jóvenes escritores en Gaza, Palestina",
   edition: "1ra Edición en español",
   originalEditor: "Refaat Alareer",
   translator: "Migdalia Arcila-Valenzuela",
   description: "Originalmente escrito en inglés y publicado en 2013, este libro contiene 23 cuentos de autores palestinos jóvenes que conmemoran los 5 años de la Operación Plomo Fundido, 23 días de bombardeo israelí sobre Gaza entre diciembre de 2008 y enero de 2009.",
-  buyLink: "#comprar", // Replace with actual link
-  coverPlaceholder: "./cover.jpg", // User should place the file 'cover.jpg' in the public root
-  titleImage: "./title.png", // User should place the file 'title.png' in the public root
-  donationInfo: "El 100% de las ganancias serán donadas a The Sameer Project"
+  coverPlaceholder: "cover.jpg", // Simplified path for public folder
+  donationInfo: "El 100% de las ganancias serán donadas a The Sameer Project",
+  price: "$60.000 COP",
+  shipping: "Envío a todo el territorio nacional",
+  whatsappNumber: "3112229114",
+  instagramUser: "@gazaresponde"
 };
 
 export const TRANSLATION_DETAILS = {
@@ -50,7 +52,6 @@ export const FEATURES = [
   },
 ];
 
-// Mock data representing the structure of the book
 export const TABLE_OF_CONTENTS = [
   { title: "Introducción", author: "Refaat Alareer" },
   { title: "L de Lección", author: "Refaat Alareer" },

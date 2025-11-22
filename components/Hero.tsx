@@ -4,7 +4,11 @@ import { ArrowRight, Heart } from 'lucide-react';
 import { BOOK_DETAILS } from '../constants';
 import { ShareButtons } from './ShareButtons';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onBuy: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onBuy }) => {
   return (
     <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background decoration */}
@@ -24,14 +28,9 @@ export const Hero: React.FC = () => {
               {BOOK_DETAILS.edition}
             </span>
             
-            {/* Title Image */}
-            <h1 className="mb-8 block">
-              <img 
-                src={BOOK_DETAILS.titleImage} 
-                alt={BOOK_DETAILS.title} 
-                className="w-full max-w-[300px] md:max-w-[450px] h-auto object-contain -ml-1"
-              />
-              <span className="sr-only">{BOOK_DETAILS.title}</span>
+            {/* Title Text using Font */}
+            <h1 className="mb-6 block font-special text-5xl md:text-7xl lg:text-8xl text-slate-900 tracking-tighter leading-[0.9]">
+              {BOOK_DETAILS.title}
             </h1>
 
             <h2 className="text-xl md:text-2xl text-slate-600 mb-8 font-medium">
@@ -43,13 +42,13 @@ export const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <a 
-                href={BOOK_DETAILS.buyLink}
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-palestine-green hover:bg-palestine-darkGreen transition-all shadow-lg hover:shadow-xl"
+              <button 
+                onClick={onBuy}
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-palestine-green hover:bg-palestine-darkGreen transition-all shadow-lg hover:shadow-xl cursor-pointer"
               >
                 Adquirir copia
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </button>
               <a 
                 href="#about"
                 className="inline-flex items-center justify-center px-8 py-4 border border-slate-200 text-base font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 transition-all"

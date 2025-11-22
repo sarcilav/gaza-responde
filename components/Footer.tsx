@@ -3,7 +3,11 @@ import { BOOK_DETAILS } from '../constants';
 import { Instagram, Mail } from 'lucide-react';
 import { ShareButtons } from './ShareButtons';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onBuy: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onBuy }) => {
   return (
     <footer className="bg-slate-900 text-slate-400 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +29,14 @@ export const Footer: React.FC = () => {
               <li><a href="#" className="hover:text-white transition-colors">Inicio</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">Sobre el Libro</a></li>
               <li><a href="#toc" className="hover:text-white transition-colors">Índice</a></li>
-              <li><a href={BOOK_DETAILS.buyLink} className="text-palestine-green hover:text-white transition-colors font-bold">Comprar ahora</a></li>
+              <li>
+                <button 
+                  onClick={onBuy} 
+                  className="text-palestine-green hover:text-white transition-colors font-bold cursor-pointer text-left"
+                >
+                  Comprar ahora
+                </button>
+              </li>
             </ul>
           </div>
 

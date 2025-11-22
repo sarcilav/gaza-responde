@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Book } from 'lucide-react';
-import { NAVIGATION, BOOK_DETAILS } from '../constants';
+import { NAVIGATION } from '../constants';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onBuy: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onBuy }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,12 +42,12 @@ export const Navbar: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <a
-              href={BOOK_DETAILS.buyLink}
-              className="bg-palestine-green text-white px-5 py-2 rounded-full font-medium hover:bg-palestine-darkGreen transition-colors shadow-md"
+            <button
+              onClick={onBuy}
+              className="bg-palestine-green text-white px-5 py-2 rounded-full font-medium hover:bg-palestine-darkGreen transition-colors shadow-md cursor-pointer"
             >
               Comprar
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,13 +76,15 @@ export const Navbar: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <a
-              href={BOOK_DETAILS.buyLink}
-              className="block px-3 py-2 mt-4 text-center rounded-md text-base font-medium bg-palestine-green text-white hover:bg-palestine-darkGreen"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                onBuy();
+              }}
+              className="block w-full text-left px-3 py-2 mt-4 text-center rounded-md text-base font-medium bg-palestine-green text-white hover:bg-palestine-darkGreen"
             >
               Comprar Libro
-            </a>
+            </button>
           </div>
         </div>
       )}

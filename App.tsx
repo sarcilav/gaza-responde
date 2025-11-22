@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
@@ -7,17 +7,24 @@ import { Translator } from './components/Translator';
 import { Excerpts } from './components/Excerpts';
 import { TableOfContents } from './components/TableOfContents';
 import { Footer } from './components/Footer';
+import { PurchaseModal } from './components/PurchaseModal';
 import { BOOK_DETAILS } from './constants';
 
 const App: React.FC = () => {
+  const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState(false);
+
+  const handleBuyClick = () => {
+    setIsPurchaseModalOpen(true);
+  };
+
   return (
     // Using HashRouter for compatibility with GitHub Pages
     <HashRouter>
       <div className="min-h-screen flex flex-col font-sans text-slate-900">
-        <Navbar />
+        <Navbar onBuy={handleBuyClick} />
         
         <main className="flex-grow">
-          <Hero />
+          <Hero onBuy={handleBuyClick} />
           <About />
           <Translator />
           <Excerpts />
@@ -34,17 +41,22 @@ const App: React.FC = () => {
                   {BOOK_DETAILS.donationInfo}.
                 </strong>
               </p>
-              <a 
-                href={BOOK_DETAILS.buyLink}
-                className="inline-block bg-palestine-black text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all shadow-lg"
+              <button 
+                onClick={handleBuyClick}
+                className="inline-block bg-palestine-black text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-800 transition-all shadow-lg cursor-pointer"
               >
                 Comprar el libro
-              </a>
+              </button>
             </div>
           </section>
         </main>
 
-        <Footer />
+        <Footer onBuy={handleBuyClick} />
+        
+        <PurchaseModal 
+          isOpen={isPurchaseModalOpen} 
+          onClose={() => setIsPurchaseModalOpen(false)} 
+        />
       </div>
     </HashRouter>
   );
