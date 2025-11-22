@@ -66,13 +66,13 @@ export const TABLE_OF_CONTENTS = [
 
 export const EXCERPTS = [
   {
-    text: "Gaza responde porque Gaza está viva. Escribir es un acto de vida, una forma de resistencia contra el olvido y la destrucción.",
+    text: "Gaza cuenta historias porque Palestina está a tan solo un cuento corto de distancia. Gaza cuenta historias para que la gente no olvide. Gaza responde porque el poder de la imaginación es una manera creativa de construir una nueva realidad. Gaza responde porque escribir es una obligación nacionalista, un deber con la humanidad, y una responsabilidad moral",
     source: "Refaat Alareer",
-    context: "De la Introducción"
+    context: "Introducción del editor"
   },
   {
-    text: "No somos números. Cada mártir tenía un nombre, una historia, un sueño que fue interrumpido pero que vive en estas páginas.",
-    source: "Anónimo",
+    text: "La absoluta determinación de luchar con todo lo que se tiene, con todos los medios posibles, en contra del proyecto sionista, en contra de la maquinaria salvaje que demuele palmo a palmo, ante nuestros ojos, la vida en Palestina es lo que motiva esta edición en español. Esta traducción es nuestra manera de extenderle los brazos a nuestros hermanos palestinos, de decirles que su voz, su sufrimiento, pero también su persistencia y tenacidad resuenan en toda América Latina.",
+    source: "Migdalia Arcila-Valenzuela",
     context: "Prólogo a la edición en español"
   }
 ];

@@ -27,7 +27,7 @@ export const Translator: React.FC = () => {
           <div className="md:col-span-7">
             <div className="inline-flex items-center gap-2 text-palestine-red font-bold tracking-wide text-sm uppercase mb-4">
               <MapPin className="w-4 h-4" />
-              Nota de la Traductora
+              Nota de la Editora a 1ra Edición en español
             </div>
             
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-8">
