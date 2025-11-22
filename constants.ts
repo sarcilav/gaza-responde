@@ -55,13 +55,13 @@ export const FEATURES = [
 
 export const TABLE_OF_CONTENTS = [
   { title: "Introducción", author: "Refaat Alareer" },
-  { title: "L de Lección", author: "Refaat Alareer" },
-  { title: "El muro", author: "Hanan Lahlouh" },
-  { title: "Cicatrices", author: "Ayah Nabiel" },
-  { title: "Deseo que...", author: "Rawan Yaghi" },
-  { title: "Mohammad", author: "Tasnim Abutabikh" },
-  { title: "Perdida en la oscuridad", author: "Wafaa Abu Al-Qumbos" },
-  { title: "Solo una hora", author: "Nour Al-Sousi" },
+  { title: "L de libertad", author: "Hanan Habashi" },
+  { title: "Un muro", author: "Rawan Yahghi" },
+  { title: "Cicatrices", author: "Aya Rabah" },
+  { title: "Un deseo de insomnio", author: "Nour El Borno" },
+  { title: "Mi hogaza de pan", author: "Tasnim Hamouda" },
+  { title: "Perdida para siempre", author: "Elham Hilles" },
+  { title: "Solo quince minutos", author: "Wafaa Abu Al-Qomboz" },
 ];
 
 export const EXCERPTS = [
