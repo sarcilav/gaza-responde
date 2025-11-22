@@ -44,10 +44,10 @@ export const Footer: React.FC<FooterProps> = ({ onBuy }) => {
           <div>
             <h4 className="text-white font-bold mb-4">Contacto</h4>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="https://www.instagram.com/gazaresponde" className="hover:text-white transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="mailto:contacto@example.com" className="hover:text-white transition-colors">
+              <a href="mailto:gazaresponde@gmail.com" className="hover:text-white transition-colors">
                 <Mail className="h-6 w-6" />
               </a>
             </div>
